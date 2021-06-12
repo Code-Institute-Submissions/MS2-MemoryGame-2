@@ -92,3 +92,91 @@ header {
 .reset {
   grid-area: reset-btn;
 }
+
+/*** Buttons ***/
+/************** buttons *************/
+.btn {
+  border-radius: 40px;
+  border: none;
+  color: black;
+  background: rgb(226,99,32);
+  background: linear-gradient(0deg, rgba(226,99,32,1) 0%, rgba(235,180,75,1) 100%);
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  padding: 12px;
+  border: solid 1px silver;
+  cursor: pointer;
+  outline: none;
+  font-family: "Exo 2", sans-serif;
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+.close {
+  align-self: flex-end;
+  color: #28e;
+  font-size: 2rem;
+  margin-right: 30px;
+}
+
+.close:hover,
+.close:focus {
+  color: #5cf;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.play-again-btn {
+  margin-bottom: 10px;
+}
+
+.play-again-btn:hover {
+  background: black;
+  color: white;
+}
+
+/*** Deck that contains 16 cards ***/
+.deck {
+  grid-area: deck;
+  background: linear-gradient(to bottom, #1b56ec, #0b38ab);
+  border-radius: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "card card card card"
+  "card card card card"
+  "card card card card"
+  "card card card card";
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+  width: 60%;
+  grid-gap: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.card {
+  background: #96c9fc;
+  background-image: url("images/bluedice.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  border-radius: 0.5em;
+  border: solid 0.1px rgb(204, 204, 204);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  cursor: pointer;
+}
+
+.deck img {
+  width: 30%;
+  visibility: hidden; 
+}
