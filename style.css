@@ -5,3 +5,90 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Quicksand", cursive;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(206,229,254,1) 100%);
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 15vh 70vh;
+  grid-template-areas:
+  "header"
+  "score-panel"
+  "deck";
+  width: 100%;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+}
+
+/*** Header ***/
+header {
+  grid-area: header;
+  margin: 15px 0;
+  font-family: "Exo 2", cursive;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+  color: #113aa0;
+}
+
+/*** Score Panel ***/
+.score-panel {
+  grid-area: score-panel;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, auto);
+  grid-template-areas: "star-rating moves timer-container reset-btn";
+  width: 70%;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Exo 2", sans-serif;
+}
+
+#star-rating {
+  grid-area: star-rating;
+  list-style: none;
+}
+
+.star {
+  display: inline-block;
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.moves {
+  grid-area: moves;
+}
+
+.moves h3 {
+  font-size: 0.8rem;
+}
+
+.moves-header {
+  color: #1547C2;
+}
+
+.moves-counter {
+  color: black;
+}
+
+.timer-header {
+  color: #1547C2;
+}
+
+.fa-clock {
+  color: rgb(37, 34, 123);
+}
+
+.timer-container {
+  grid-area: timer-container;
+}
+
+.reset {
+  grid-area: reset-btn;
+}
