@@ -206,6 +206,52 @@ animation: pulse 1s;
 background: transparent;
 }
 
+/*** Game win Modal ***/
+
+/* outer modal container */
+.win-game-modal {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(46, 61, 73);
+  background-color: rgba(46, 61, 73, 0.6);
+  justify-items: center;
+  align-items: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 20px auto;
+  border: 0.8em solid #fc4;
+  width: 90%;
+  height: 90%;
+}
+
+.modal p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.modal-img {
+  width: 20%;
+  margin: 15px 0;
+}
+
 /*** Animations ***/
 @keyframes pulse {
 0% {
