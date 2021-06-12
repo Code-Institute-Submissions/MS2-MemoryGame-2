@@ -30,7 +30,23 @@
                 <button class="btn reset-btn">Reset <i class="fa fa-repeat"></i></button>
             </div>
         </section>
+
+        <ul class="deck"></ul>
     </div>
+
+    <!-- Modal section - only appears when game is complete -->
+    <section class="win-game-modal">
+        <div id="modal" class="modal">
+            <!-- Modal content to provide feedback -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Congratulations!</h2>
+                <p>You have won the game and found all 8 pairs of cards.</p>
+                <img class="modal-img" src="images/success.svg" alt="Gold medal for completing the game">
+                <button class="btn play-again-btn">Play Again?</button>
+            </div>
+        </div>
+    </section>
     
 
     <script src="script.js"></script>
