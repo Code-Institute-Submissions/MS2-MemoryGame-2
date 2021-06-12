@@ -230,3 +230,75 @@ background: transparent;
     transform: scale(1);
   }
   }
+
+  /*************** Media Queries ***************/
+
+  /*** Small devices ***/
+
+@media only screen and (max-width: 600px){
+  .deck {
+    width: 92%;
+    height: 90%;
+    grid-gap: 10px;
+  }
+
+  .header h1 {
+    font-size: 1.3em;
+    margin-top: 25px;
+  }
+
+  .score-panel {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .timer i {
+    display: none;
+  }
+
+  .moves h3 {
+    font-size: 0.6rem;
+  }
+
+  .card {
+    background-size: 70%;
+  }
+
+  .card img {
+    width: 70%;
+  }
+
+  .reset-btn {
+    width: 70px;
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+
+  .reset-btn i {
+    display: none;
+  }
+
+  .modal-content {
+    height: 70%;
+    margin: 20% auto;
+    padding: 20px 10px;
+  }
+
+  .modal P {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .modal-img {
+    width: 40%;
+  }
+
+  .close {
+    margin-right: 15px;
+    margin-top: -10px;
+  }
+
+  .play-again-btn {
+    margin-bottom: 20px;
+  }
+}
