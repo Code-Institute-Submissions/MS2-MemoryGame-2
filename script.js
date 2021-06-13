@@ -126,5 +126,10 @@ window.addEventListener("DOMContentLoaded", function(){
     }, 1000);
   }
 
+  // Create a function that stops the timer once all 16 cards are matched.
+  function stopTime() {
+    clearInterval(time);
+  }
+
 
 });
