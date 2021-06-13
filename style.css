@@ -299,6 +299,7 @@ background: transparent;
     width: 92%;
     height: 90%;
     grid-gap: 10px;
+    margin-top: -15px;
   }
 
   .header h1 {
