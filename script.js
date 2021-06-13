@@ -253,5 +253,27 @@ window.addEventListener("DOMContentLoaded", function(){
     starRating();
   }
 
+  /*Function that produces stats regarding time, number of moves made, 
+  and star rating for the end game and updates the modal with these stats. */
+  function AddStats() {
+    // Access the modal content div
+    const stats = document.querySelector(".modal-content");
+    // Create three different paragraphs
+    for (let i = 1; i <= 3; i++) {
+      // Create a new Paragraph
+      const statsElement = document.createElement("p");
+      // Add a class to the new Paragraph
+      statsElement.classList.add("stats");
+      // Add the new created <p> tag to the modal content
+      stats.appendChild(statsElement);
+    }
+    // Select all p tags with the class of stats and update the content
+    let p = stats.querySelectorAll("p.stats");
+    // Set the new <p> to have the content of stats (time, moves and star rating)
+    p[0].innerHTML = `<strong>Time to complete :</strong> ${minutes} Minutes and ${seconds} Seconds`;
+    p[1].innerHTML = `<strong>Moves made :</strong> ${moves}`;
+    p[2].innerHTML = `<strong>Your rating is :</strong> ${starCount} out of 3 stars`;
+  }
+
 
 });
