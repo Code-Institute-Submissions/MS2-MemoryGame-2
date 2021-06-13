@@ -473,3 +473,60 @@ background: transparent;
     font-size: 2.5rem;
   }
 }
+
+/*** Extra large screens **/
+@media only screen and (min-width: 1920px){
+  .deck {
+    padding: 50px;
+    grid-gap: 50px;
+    border-radius: 60px;
+  }
+
+  .card {
+    width: 95%;
+    height: 95%;
+    border-radius: 60px;
+  }
+
+  .card img {
+    width: 40%;
+  }
+
+  .header h1 {
+    font-size: 8em;
+    margin-top: 2%;
+  }
+
+  .score-panel {
+    font-size: 4em;
+  }
+
+  .reset-btn {
+    width: 400px;
+    height: 150px;
+    font-size: 3rem;
+  }
+
+  .modal-content {
+    width: 50%;
+    height: 60%;
+    font-size: 4em;
+    margin: 10% auto;
+  }
+
+  .modal p {
+    padding: 1%;
+  }
+
+  .play-again-btn {
+    margin: 2%;
+    font-size: 3rem;
+    width: 400px;
+    height: 150px;
+  }
+
+  .close {
+    font-size: 7rem;
+    margin-top: -60px;
+  }
+}
