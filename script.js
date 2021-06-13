@@ -131,5 +131,76 @@ window.addEventListener("DOMContentLoaded", function(){
     clearInterval(time);
   }
 
+  // Create a function that resets all global variables and the content of HTML elements (timer, stars, moves, and their innerHTML)
+  function resetEverything() {
+    // Stop time, reset the minutes and seconds update the time inner HTML
+    stopTime();
+    timeStart = false;
+    seconds = 0;
+    minutes = 0;
+    timeCounter.innerHTML = `<i class='far fa-clock' style="color: #1547C2;"></i> Timer: 00:00`;
+
+    // Reset star count and the add the class back to show stars again
+    star[1].firstElementChild.classList.add("fa-star");
+    star[2].firstElementChild.classList.add("fa-star");
+    starCount = 3;
+
+    // Reset moves count and reset its inner HTML
+    moves = 0;
+    movesCount.innerHTML = 0;
+
+    // Clear both arrays that hold the openedCards and matched cards
+    matched = [];
+    openedCards = [];
+
+    // Clear the deck
+    removeCard();
+
+    // Create a new deck
+    startGame();
+  }
+
+  /* Create a function that increments the moves counter, which is called at each comparison.
+  for every two cards compared add one to the count. */
+  function movesCounter() {
+    // Update the html for the moves counter
+    movesCount.innerHTML++;
+    // Keep track of the number of moves for every pair checked
+    moves++;
+  }
+
+  /* Create a function that updates the star rating depending on the number of moves the player has made to complete the Game
+  the number of starts will decrease the more moves a player makes. */
+  function starRating() {
+    if (moves === 16) {
+      // First element child is the <i> within the <li>
+      star[2].firstElementChild.classList.remove("fa-star");
+      starCount--;
+      document.querySelector(".star").style.animation = "pulse2 1s";
+    }
+    if (moves === 20) {
+      star[1].firstElementChild.classList.remove("fa-star");
+      starCount--;
+      document.querySelector(".star").style.animation = "pulse2 1s";
+    }
+  }
+
+  // Create a function to compare two cards in the openedCards array to see if they match
+  function compareTwo() {
+    // When there are 2 cards in the openedCards array
+    if (openedCards.length === 2) {
+      // Disable any further mouse clicks on other cards
+      document.body.style.pointerEvents = "none";
+    }
+    // Compare the two images src
+    if (openedCards.length === 2 && openedCards[0].src === openedCards[1].src) {
+      // If matched call match()
+      match();
+    } else if (openedCards.length === 2 && openedCards[0].src != openedCards[1].src) {
+      // If No match call noMatch()
+      noMatch();
+    }
+  }
+
 
 });
