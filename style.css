@@ -36,6 +36,10 @@ header {
   color: #113aa0;
 }
 
+.decoration {
+  font-size: 1.3em;
+}
+
 /*** Score Panel ***/
 .score-panel {
   grid-area: score-panel;
