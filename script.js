@@ -98,5 +98,13 @@ window.addEventListener("DOMContentLoaded", function(){
 
   startGame();
 
+  // create a function that removes cards. Function will be called upon reset
+  function removeCard() {
+    // As long as <ul> deck has a child node, remove the child node
+    while (deck.hasChildNodes()) {
+      deck.removeChild(deck.firstChild);
+    }
+  }
+
 
 });
