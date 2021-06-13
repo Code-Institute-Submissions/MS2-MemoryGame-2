@@ -202,5 +202,56 @@ window.addEventListener("DOMContentLoaded", function(){
     }
   }
 
+  // Create a function that checks if the two cards match, and keep the cards open if they do and applie class of match.
+  function match() {
+    /* Access the two cards in openedCards array and add the class of match to the parent of the image, i.e the <li> tag */
+
+    setTimeout(function() {
+      openedCards[0].parentElement.classList.add("match");
+      openedCards[1].parentElement.classList.add("match");
+
+      // Push the matched cards to the matched array
+      matched.push(...openedCards);
+
+      // Allow for further mouse clicks on cards
+      document.body.style.pointerEvents = "auto";
+
+      // Check to see if the game has been won with all 8 pairs
+      winGame();
+
+      /* play sound when cards match */
+      let match = new Audio("sounds/match2.mp3");
+      match.play();
+      // Clear the openedCards array
+      openedCards = [];
+    }, 600);
+
+    // Call movesCounter to increment by one
+    movesCounter();
+    starRating();
+  }
+
+  /* function that checks if the two cards do not match, and removes the cards from the openedCards array
+  and flips the cards back over by removing the flip class. */
+  function noMatch() {
+    // After 700 miliseconds the two cards open will have the class of flip removed from the images parent element <li>
+    setTimeout(function() {
+
+      // Remove class flip on images parent element
+      openedCards[0].parentElement.classList.remove("flip");
+      openedCards[1].parentElement.classList.remove("flip");
+
+      // Allow further mouse clicks on cards
+      document.body.style.pointerEvents = "auto";
+
+      // Remove the cards from openedCards array
+      openedCards = [];
+    }, 700);
+
+    // Call movesCounter to increment by one
+    movesCounter();
+    starRating();
+  }
+
 
 });
