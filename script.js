@@ -42,4 +42,61 @@ window.addEventListener("DOMContentLoaded", function(){
   let minutes = 0;
   let seconds = 0;
   let timeStart = false;
+
+  /* create a function that shuffles the array every time the game is started
+  function will have a random number, a temporary variable which will be storing the value of the array at the current iteration
+  it will then pull out the value of the shuffledDeck at a random iteration and will swap it with the current iteration value (stored at temporary variable)
+  it will continue to loop through the array and repeat the same process, producting a randomly shuffled array 
+  function will then return the shuffled array */
+  function shuffle(arr) {
+    for (let i = 0; i < arr.length; i++) {
+
+      let randomNumber = Math.floor(Math.random() * arr.length);
+
+      let temp = "";
+      let current = arr[i];
+      let randomElement = arr[randomNumber];
+
+      temp = current;
+      arr[i] = randomElement;
+      arr[randomNumber] = temp;
+    }
+    return arr;
+  }
+
+  function startGame() {
+    // Invoke shuffle function created earlier and store in variable
+    const shuffledDeck = shuffle(deckCards);
+
+    // Iterate over deck of cards array
+    for (let i = 0; i < shuffledDeck.length; i++) {
+      // at each iteration, create a <li> tag
+      const liTag = document.createElement("li");
+      // Give <li> class of card
+      liTag.classList.add("card");
+      // Create an <img> tag
+      const addImage = document.createElement("img");
+      // Append <img> to <li> tag
+      liTag.appendChild(addImage);
+      // Set the img src path with the shuffled deck
+      addImage.setAttribute("src", "images/" + shuffledDeck[i]);
+      // Add an alt tag to the image
+      addImage.setAttribute("alt", `Image of ${shuffledDeck[i]}`);
+      // Append the new <li> tag to the deck
+      deck.appendChild(liTag);
+    }
+
+    let cards = document.getElementsByClassName("card");
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].addEventListener("click", function() {
+        let flip = new Audio("sounds/flip.mp3");
+        flip.play();
+      });
+    }
+    
+  }
+
+  startGame();
+
+
 });
