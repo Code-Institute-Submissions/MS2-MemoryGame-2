@@ -70,7 +70,7 @@ header {
 }
 
 .fa-star {
--webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-width: 0.25px;
 -webkit-text-stroke-color: rgb(57, 56, 56);
 }
 
@@ -113,7 +113,7 @@ header {
   border: none;
   color: black;
   background: rgb(226,99,32);
-  background: linear-gradient(0deg, rgba(226,99,32,1) 0%, rgba(235,180,75,1) 100%);
+  background: linear-gradient(0deg, rgb(165, 137, 13) 0%, gold 100%);
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
   padding: 12px;
   border: solid 1px silver;
@@ -123,7 +123,7 @@ header {
 }
 
 .btn:hover {
-  background: black;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(83, 83, 82) 100%);
   color: white;
 }
 
