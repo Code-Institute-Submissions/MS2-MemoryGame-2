@@ -275,5 +275,83 @@ window.addEventListener("DOMContentLoaded", function(){
     p[2].innerHTML = `<strong>Your rating is :</strong> ${starCount} out of 3 stars`;
   }
 
+  // create function that displays the modal when the game is won
+  function displayModal() {
+    // Access the modal <span> element (x) that closes the modal
+    const modalClose = document.getElementsByClassName("close")[0];
+    // When the game is won set modal to display block to show it
+    modal.style.display = "block";
+
+    // When the user clicks on <span> (x), close the modal
+    modalClose.onclick = function() {
+      modal.style.display = "none";
+    };
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  }
+
+  /* function used Check the length of the matched array and if there are 8 pairs 16 cards 
+  all together then the game is won.
+  Stop the timer update the modal with stats and show the modal. */
+  function winGame() {
+    if (matched.length === 16) {
+      stopTime();
+      AddStats();
+
+
+      // play victory sound when all cards are matched and display modal 700ms after last match is made
+      setTimeout(() => {
+        let victory = new Audio("sounds/victory.mp3");
+        displayModal();
+        victory.play();
+      }, 800);
+    }
+  }
+
+  deck.addEventListener("click", function(evt) {
+    if (evt.target.nodeName === "LI") {
+      // Start the timer after the first click of one card
+      // Executes the timer() function
+      if (timeStart === false) {
+        timeStart = true;
+        timer();
+      }
+      // Call flipCard() function
+      flipCard();
+    }
+
+    //Flip the card and display cards img
+    function flipCard() {
+      // When <li> is clicked add the class .flip to show img
+      evt.target.classList.add("flip");
+      // Call addToOpenedCards() function
+      addToOpenedCards();
+    }
+
+    //Add the fliped cards to the empty array of openedCards
+    function addToOpenedCards() {
+      /* If the openedCards array has zero or one other img push another
+      img into the array so we can compare these two to be matched
+      */
+      if (openedCards.length === 0 || openedCards.length === 1) {
+        // Push that img to openedCards array
+        openedCards.push(evt.target.firstElementChild);
+      }
+      // Call compareTwo() function
+      compareTwo();
+    }
+  });
+
+  reset.addEventListener('click', resetEverything);
+
+  playAgain.addEventListener('click', function() {
+    modal.style.display = "none";
+    resetEverything();
+  });
+
 
 });
