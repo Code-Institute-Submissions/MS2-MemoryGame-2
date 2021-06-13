@@ -106,5 +106,25 @@ window.addEventListener("DOMContentLoaded", function(){
     }
   }
 
+  /* Update the timer in the HTML for minutes and seconds
+  The timer function is called in the event listener the first time a card is clicked. */
+  function timer() {
+    // Update the count every 1 second
+    time = setInterval(function() {
+      seconds++;
+      if (seconds === 60) {
+        minutes++;
+        seconds = 0;
+      }
+
+      // Update the timer in HTML with the time it takes the user to play the game
+      if (screen.width <= 500) {
+        timeCounter.innerHTML = `<i class='fa fa-clock'></i> ${minutes} Mins ${seconds} Secs`;
+      } else {
+        timeCounter.innerHTML = `<i class='fa fa-clock' style="color: #1547C2;"></i><strong style="color: #1547C2;"> Time</strong>: ${minutes} Minutes ${seconds} Seconds`;
+      }
+    }, 1000);
+  }
+
 
 });
