@@ -138,7 +138,7 @@ window.addEventListener("DOMContentLoaded", function(){
     timeStart = false;
     seconds = 0;
     minutes = 0;
-    timeCounter.innerHTML = `<i class='far fa-clock' style="color: #1547C2;"></i> Timer: 00:00`;
+    timeCounter.innerHTML = `<i class='far fa-clock' style="color: orange;"></i> Timer: 00:00`;
 
     // Reset star count and the add the class back to show stars again
     star[1].firstElementChild.classList.add("fa-star");
