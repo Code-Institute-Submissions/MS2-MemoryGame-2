@@ -121,7 +121,7 @@ window.addEventListener("DOMContentLoaded", function(){
       if (screen.width <= 500) {
         timeCounter.innerHTML = `<i class='fa fa-clock'></i> ${minutes} Mins ${seconds} Secs`;
       } else {
-        timeCounter.innerHTML = `<i class='fa fa-clock' style="color: #1547C2;"></i><strong style="color: #1547C2;"> Time</strong>: ${minutes} Minutes ${seconds} Seconds`;
+        timeCounter.innerHTML = `<i class='fa fa-clock' style="color: orange;"></i><strong style="color: orange;"> Time:</strong> ${minutes} Minutes ${seconds} Seconds`;
       }
     }, 1000);
   }
