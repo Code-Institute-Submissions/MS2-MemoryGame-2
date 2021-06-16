@@ -176,12 +176,13 @@ window.addEventListener("DOMContentLoaded", function(){
       // First element child is the <i> within the <li>
       star[2].firstElementChild.classList.remove("fa-star");
       starCount--;
-      document.querySelector(".star").style.animation = "pulse2 1s";
+      document.querySelectorAll(".star")[0].style.animation = "stars-pulse 1s";
+      document.querySelectorAll(".star")[1].style.animation = "stars-pulse 1s";
     }
-    if (moves === 20) {
+    if (moves === 19) {
       star[1].firstElementChild.classList.remove("fa-star");
       starCount--;
-      document.querySelector(".star").style.animation = "pulse2 1s";
+      document.querySelector(".star").style.animation = "stars-pulse 1s";
     }
   }
 
