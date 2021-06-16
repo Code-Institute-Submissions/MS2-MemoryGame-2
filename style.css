@@ -119,7 +119,6 @@ header {
   background: linear-gradient(0deg, rgb(165, 137, 13) 0%, gold 100%);
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
   padding: 12px;
-  border: solid 1px silver;
   cursor: pointer;
   outline: none;
   font-family: "Exo 2", sans-serif;
