@@ -85,23 +85,24 @@ header {
 }
 
 .moves-header {
-  color: #1547C2;
+  color: orange;
 }
 
 .moves-counter {
-  color: black;
+  color: white;
 }
 
 .timer-header {
-  color: #1547C2;
+  color: orange;
 }
 
 .fa-clock {
-  color: rgb(37, 34, 123);
+  color: #88ebb3;
 }
 
 .timer-container {
   grid-area: timer-container;
+  color: white;
 }
 
 .reset {
