@@ -156,7 +156,7 @@ header {
 /*** Deck that contains 16 cards ***/
 .deck {
   grid-area: deck;
-  background: linear-gradient(to bottom, #1b56ec, #0b38ab);
+  background: linear-gradient(to bottom, #88ebb3, #04b536);
   border-radius: 1.5em;
   display: grid;
   grid-template-columns: repeat(4, auto);
