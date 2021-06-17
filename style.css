@@ -110,7 +110,6 @@ header {
 }
 
 /*** Buttons ***/
-/************** buttons *************/
 .btn {
   border-radius: 40px;
   border: none;
@@ -191,6 +190,14 @@ header {
   justify-items: center;
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
   cursor: pointer;
+}
+
+.card:hover {
+  background: #0d6610;
+  background-image: url("images/chick.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40%;
 }
 
 .deck img {
