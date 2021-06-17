@@ -270,10 +270,22 @@ window.addEventListener("DOMContentLoaded", function(){
     }
     // Select all p tags with the class of stats and update the content
     let p = stats.querySelectorAll("p.stats");
-    // Set the new <p> to have the content of stats (time, moves and star rating)
-    p[0].innerHTML = `<strong>Time to complete :</strong> ${minutes} Minutes and ${seconds} Seconds`;
-    p[1].innerHTML = `<strong>Moves made :</strong> ${moves}`;
-    p[2].innerHTML = `<strong>Your rating is :</strong> ${starCount} out of 3 stars`;
+    // Set the new <p> to have the content of stats (time, moves and star rating) depending on the star rating
+    if(starCount === 1){
+      p[0].innerHTML = `<strong>Time to complete :</strong> ${minutes} Minutes and ${seconds} Seconds`;
+      p[1].innerHTML = `<strong>Moves made :</strong> ${moves} - Too many moves`;
+      p[2].innerHTML = `<strong>Your rating is :</strong> ${starCount} out of 3 stars ... <i class="fas fa-times-circle"></i> Fail - You must try harder`;
+    }
+    else if(starCount === 2){
+      p[0].innerHTML = `<strong>Time to complete :</strong> ${minutes} Minutes and ${seconds} Seconds`;
+      p[1].innerHTML = `<strong>Moves made :</strong> ${moves} - <i class="fas fa-check"></i> Pass - Not too bad!`;
+      p[2].innerHTML = `<strong>Your rating is :</strong> ${starCount} out of 3 stars`;
+    }
+    else{
+      p[0].innerHTML = `<strong>Time to complete :</strong> ${minutes} Minutes and ${seconds} Seconds`;
+      p[1].innerHTML = `<strong>Moves made :</strong> ${moves}`;
+      p[2].innerHTML = `<strong>Your rating is :</strong> ${starCount} out of 3 stars ... <i class="fas fa-check-circle"></i> Success - Amazing Brain Memory`;
+    }
   }
 
   // create function that displays the modal when the game is won
