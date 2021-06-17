@@ -134,6 +134,8 @@ header {
   color: #28e;
   font-size: 2rem;
   margin-right: 30px;
+  position: absolute;
+  top: 10px;
 }
 
 .close:hover,
@@ -255,6 +257,7 @@ background: transparent;
   border: 0.8em solid #fc4;
   width: 90%;
   height: 90%;
+  position: relative;
 }
 
 .modal p {
