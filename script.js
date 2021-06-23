@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function(){
+window.addEventListener("DOMContentLoaded", function() {
   // declaring some global variables
 
   // array of images to be stored in the individual cards
@@ -93,7 +93,7 @@ window.addEventListener("DOMContentLoaded", function(){
         flip.play();
       });
     }
-    
+
   }
 
   startGame();
@@ -234,21 +234,21 @@ window.addEventListener("DOMContentLoaded", function(){
 
   /* function that checks if the two cards do not match, and removes the cards from the openedCards array
   and flips the cards back over by removing the flip class. */
-  
+
   function noMatch() {
     //after 400 milliseconds, add the noMatch class to the card
-    setTimeout(function(){
+    setTimeout(function() {
       openedCards[0].parentElement.classList.add("noMatch");
       openedCards[1].parentElement.classList.add("noMatch");
     }, 400);
 
-    setTimeout(function(){
+    setTimeout(function() {
       //after 600milliseconds, play the "wrong.mp3" audio file
       let wrong = new Audio("sounds/wrong.mp3");
       wrong.play();
     }, 600);
 
-    setTimeout(function(){
+    setTimeout(function() {
       //after 850 milliseconds, remove the noMatch class
       openedCards[0].parentElement.classList.remove("noMatch");
       openedCards[1].parentElement.classList.remove("noMatch");
@@ -274,6 +274,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
   /*Function that produces stats regarding time, number of moves made, 
   and star rating for the end game and updates the modal with these stats. */
+
   function AddStats() {
     // Access the modal content div
     const stats = document.querySelector(".modal-content");
@@ -289,17 +290,15 @@ window.addEventListener("DOMContentLoaded", function(){
     // Select all p tags with the class of stats and update the content
     let p = stats.querySelectorAll("p.stats");
     // Set the new <p> to have the content of stats (time, moves and star rating) depending on the star rating
-    if(starCount === 1){
+    if (starCount === 1) {
       p[0].innerHTML = `<strong>Time to complete :</strong> ${minutes} Minutes and ${seconds} Seconds`;
       p[1].innerHTML = `<strong>Moves made :</strong> ${moves} - Too many moves`;
       p[2].innerHTML = `<strong>Your rating is :</strong> ${starCount} out of 3 stars ... <i class="fas fa-times-circle"></i> Fail - You must try harder`;
-    }
-    else if(starCount === 2){
+    } else if (starCount === 2) {
       p[0].innerHTML = `<strong>Time to complete :</strong> ${minutes} Minutes and ${seconds} Seconds`;
       p[1].innerHTML = `<strong>Moves made :</strong> ${moves} - <i class="fas fa-check"></i> Pass - Not too bad!`;
       p[2].innerHTML = `<strong>Your rating is :</strong> ${starCount} out of 3 stars`;
-    }
-    else{
+    } else {
       p[0].innerHTML = `<strong>Time to complete :</strong> ${minutes} Minutes and ${seconds} Seconds`;
       p[1].innerHTML = `<strong>Moves made :</strong> ${moves}`;
       p[2].innerHTML = `<strong>Your rating is :</strong> ${starCount} out of 3 stars ... <i class="fas fa-check-circle"></i> Success - Amazing Brain Memory`;
@@ -307,6 +306,7 @@ window.addEventListener("DOMContentLoaded", function(){
   }
 
   // create function that displays the modal when the game is won
+
   function displayModal() {
     // Access the modal <span> element (x) that closes the modal
     const modalClose = document.getElementsByClassName("close")[0];
@@ -328,6 +328,7 @@ window.addEventListener("DOMContentLoaded", function(){
   /* function used Check the length of the matched array and if there are 8 pairs 16 cards 
   all together then the game is won.
   Stop the timer update the modal with stats and show the modal. */
+
   function winGame() {
     if (matched.length === 16) {
       stopTime();
@@ -383,6 +384,5 @@ window.addEventListener("DOMContentLoaded", function(){
     modal.style.display = "none";
     resetEverything();
   });
-
 
 });
