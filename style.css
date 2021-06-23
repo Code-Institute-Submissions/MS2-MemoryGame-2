@@ -234,7 +234,7 @@ background: transparent;
   background: red;
   visibility: visible;
   cursor: default;
-  animation: pulse 1s;
+  animation: pulse 1.5s;
 }
 
 /*** Game win Modal ***/

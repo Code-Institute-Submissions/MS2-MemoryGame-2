@@ -243,18 +243,18 @@ window.addEventListener("DOMContentLoaded", function() {
     }, 400);
 
     setTimeout(function() {
-      //after 600milliseconds, play the "wrong.mp3" audio file
+      //after 1 seconds, play the "wrong.mp3" audio file
       let wrong = new Audio("sounds/wrong.mp3");
       wrong.play();
-    }, 600);
+    }, 1000);
 
     setTimeout(function() {
-      //after 850 milliseconds, remove the noMatch class
+      //after 1450 milliseconds, remove the noMatch class
       openedCards[0].parentElement.classList.remove("noMatch");
       openedCards[1].parentElement.classList.remove("noMatch");
-    }, 850);
+    }, 1450);
 
-    // After 900 miliseconds the two cards open will have the class of flip removed from the images parent element <li>
+    // After 1500 miliseconds the two cards open will have the class of flip removed from the images parent element <li>
     setTimeout(function() {
       // Remove class flip on images parent element
       openedCards[0].parentElement.classList.remove("flip");
@@ -265,7 +265,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
       // Remove the cards from openedCards array
       openedCards = [];
-    }, 900);
+    }, 1500);
 
     // Call movesCounter to increment by one
     movesCounter();
