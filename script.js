@@ -234,10 +234,28 @@ window.addEventListener("DOMContentLoaded", function(){
 
   /* function that checks if the two cards do not match, and removes the cards from the openedCards array
   and flips the cards back over by removing the flip class. */
+  
   function noMatch() {
-    // After 700 miliseconds the two cards open will have the class of flip removed from the images parent element <li>
-    setTimeout(function() {
+    //after 400 milliseconds, add the noMatch class to the card
+    setTimeout(function(){
+      openedCards[0].parentElement.classList.add("noMatch");
+      openedCards[1].parentElement.classList.add("noMatch");
+    }, 400);
 
+    setTimeout(function(){
+      //after 600milliseconds, play the "wrong.mp3" audio file
+      let wrong = new Audio("sounds/wrong.mp3");
+      wrong.play();
+    }, 600);
+
+    setTimeout(function(){
+      //after 850 milliseconds, remove the noMatch class
+      openedCards[0].parentElement.classList.remove("noMatch");
+      openedCards[1].parentElement.classList.remove("noMatch");
+    }, 850);
+
+    // After 900 miliseconds the two cards open will have the class of flip removed from the images parent element <li>
+    setTimeout(function() {
       // Remove class flip on images parent element
       openedCards[0].parentElement.classList.remove("flip");
       openedCards[1].parentElement.classList.remove("flip");
@@ -247,7 +265,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
       // Remove the cards from openedCards array
       openedCards = [];
-    }, 700);
+    }, 900);
 
     // Call movesCounter to increment by one
     movesCounter();
