@@ -66,7 +66,7 @@ The deck of cards was designed using CSS grid, in order to ensure responsiveness
 
 ***
  
-## Logic
+## Logic / Game Process
 
 * An array that stores the images that will be displayed on the cards.
 * An array that stores opened cards and an array that stores matched cards.
@@ -74,4 +74,4 @@ The deck of cards was designed using CSS grid, in order to ensure responsiveness
 * A function that initiates the game which invokes the shuffle function, assigns random image onto each individual card and appends cards to the deck.
 * A timer function which is called in the card eventListener that updates the innerHTML every 1000ms interval from the moment a card is clicked.
 * A stopTime function that clears the time function interval.
-* 
+*  
