@@ -64,11 +64,12 @@ The deck of cards was designed using CSS grid, in order to ensure responsiveness
 
 * On load or restart, the cards must be shuffled and a random array of images is to be generated.
 * The game needs to be able to handle both matched and unmatched cards.
-* Cards need to make a sound when flipped, a different sound when they match, an "incorrect" sound when unmatched and a victory sound when game is completed.
+* Cards need to make a sound when flipped, a success sound when they match, an error sound when unmatched and a victory sound when game is completed.
 * Game should be able to display the number of moves or clicks a user has made.
 * Game must display a timer that starts when the first click is made, and ends when the last pair of cards has been matched.
-* Game should be able to display a star rating that indicates a user's performance, based on the number of moves made. 
-* A reset button that shuffles the images array, resets timer and star rating, and reassigns those random images to the cards.
+* Game should be able to display a star rating that indicates a user's performance, based on the number of moves made.
+* The more moves a user makes, the user rating decreases. 
+* A reset button that shuffles the images array, resets timer and star rating, and reassigns those reshuffled images to the cards.
 * A win game modal displayed when the game is completed to congratulate the user.
 * Win Game modal is updated with user's game stats and displayed at the end of the game to provide feedback. 
 * Win game modal needs to have the option to ask the user to play again.
@@ -77,10 +78,19 @@ The deck of cards was designed using CSS grid, in order to ensure responsiveness
  
 ## Logic / Game Process
 
-* An array that stores the images that will be displayed on the cards.
+* An array that stores the image paths, which will be assigned to the cards and displayed on their backfaces.
 * An array that stores opened cards and an array that stores matched cards.
 * Function that shuffles the images array when the game is loaded
 * A function that initiates the game which invokes the shuffle function, assigns random image onto each individual card and appends cards to the deck.
-* A timer function which is called in the card eventListener that updates the innerHTML every 1000ms interval from the moment a card is clicked.
+* A timer function which is called in the card eventListener that updates the innerHTML every 1 second interval from the moment a card is clicked.
 * A stopTime function that clears the time function interval.
-*  
+* A reset function that resets all global variables and the content of HTML elements (timer, stars, moves, and their innerHTML) and empties all arrays.
+* A movesCounter function that updates the number of moves made.
+* A function that updates the star rating depending on the number of moves the player has made to complete the Game. 
+* The number of starts will decrease the more moves a player makes. 
+* A function that compares two cards in the openedCards array when its length is 2, and decides whether they're a match or a noMatch.
+* If they match, they will be pushed to the matched cards array, otherwise they will be removed from the openedCards array.
+* A function that fetches the player stats, and provides appropriate feedback based on the stats.
+* A function that displays the win-game modal.
+* A Win-game function that displays the win-game modal when game is completed, and calls the stats function and stoptimer function.
+* A function that handles clicked cards, applies flip animation, plays audio reveals backface and adds card content to openedCards array.
