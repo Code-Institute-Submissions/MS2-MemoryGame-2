@@ -47,7 +47,7 @@ The game is made up of a single page containing a header, a score panel that kee
 
 The game board is made up of a deck div containing 16 cards which were created dynamically in javascript. Each card consists of a front face and a backface. On card hover, the card background lightens upslightly, and on card click, the card flips 180 degrees and reveals the image behind it, which the user then needs to memorise to improve performance. 
 
-The primary colours used in my palette were three shades of green, two shades of yellow, on a green & black vector background, and cards that have an image of a vector cartoon animal to convey a more "game" feel, as well as careful choice of multi-coloured vector icons on the backface of the cards to ensure a colour diversity while maintaining a three-coloured theme. 
+The primary colours used in my palette were three shades of green, two shades of yellow/orange, on a green & black vector background. The cards have an image of a vector cartoon animal to convey a more "game" feel, as well as careful choice of multi-coloured vector icons on the backface of the cards to ensure some colour diversity while maintaining a three-coloured theme. 
 
 
 <p align="center">
