@@ -378,9 +378,10 @@ background: transparent;
     padding: 20px 10px;
   }
 
-  .modal P {
+  .modal p {
     font-size: 0.7rem;
     text-align: center;
+    line-height: 15px;
   }
 
   .modal-img {
