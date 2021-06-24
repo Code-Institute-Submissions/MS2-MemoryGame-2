@@ -155,9 +155,9 @@ As a user, I would like to:
 * Reset score: Restart the game again at any stage.
 
 #### Features that can be implemented
-High score board: show all time statistics of all users.
-More game difficulty modes.
-Timed mode: add a timer to make the game more challenging, i.e. finish game before timer runs out.
+* High score board: show all time statistics of all users.
+* More game difficulty modes.
+* Timed mode: add a timer to make the game more challenging, i.e. finish game before timer runs out.
 
 ***
 
@@ -167,3 +167,15 @@ Timed mode: add a timer to make the game more challenging, i.e. finish game befo
 * Javascript
 * Google Fonts
 * Font Awesome Library
+* Markup Validation Service
+* CSS Validation Service
+* JSHint
+* Am I responsive
+
+***
+
+## Testing
+
+## Deployment
+
+## Credits
