@@ -174,8 +174,8 @@ header {
   font-family: "Exo 2", sans-serif;
 }
 
-.btn:hover {
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(83, 83, 82) 100%);
+.btn:hover, .start:hover {
+  background: linear-gradient(0deg, rgb(4, 93, 7) 0%, #04b536 100%);
   color: white;
 }
 
