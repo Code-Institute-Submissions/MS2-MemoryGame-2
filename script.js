@@ -344,8 +344,8 @@ window.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  deck.addEventListener("click", function(evt) {
-    if (evt.target.nodeName === "LI") {
+  function clickHandler(event) {
+    if (event.target.nodeName === "LI") {
       // Start the timer after the first click of one card
       // Executes the timer() function
       if (timeStart === false) {
@@ -359,7 +359,7 @@ window.addEventListener("DOMContentLoaded", function() {
     //Flip the card and display cards img
     function flipCard() {
       // When <li> is clicked add the class .flip to show img
-      evt.target.classList.add("flip");
+      event.target.classList.add("flip");
       // Call addToOpenedCards() function
       addToOpenedCards();
     }
@@ -371,12 +371,15 @@ window.addEventListener("DOMContentLoaded", function() {
       */
       if (openedCards.length === 0 || openedCards.length === 1) {
         // Push that img to openedCards array
-        openedCards.push(evt.target.firstElementChild);
+        openedCards.push(event.target.firstElementChild);
       }
       // Call compareTwo() function
       compareTwo();
     }
-  });
+  }
+
+  deck.addEventListener("click", clickHandler);
+  deck.addEventListener("touchstart", clickHandler);
 
   reset.addEventListener('click', resetEverything);
 
