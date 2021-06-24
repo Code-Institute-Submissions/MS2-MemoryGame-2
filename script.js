@@ -240,13 +240,13 @@ window.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
       openedCards[0].parentElement.classList.add("noMatch");
       openedCards[1].parentElement.classList.add("noMatch");
-    }, 400);
+    }, 450);
 
     setTimeout(function() {
       //after 1 seconds, play the "wrong.mp3" audio file
       let wrong = new Audio("sounds/wrong.mp3");
       wrong.play();
-    }, 1000);
+    }, 600);
 
     setTimeout(function() {
       //after 1450 milliseconds, remove the noMatch class
