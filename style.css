@@ -717,10 +717,18 @@ background: transparent;
     font-size: 4em;
   }
 
+  .star {
+    font-size: 2em;
+  }
+
+  .moves, .moves-header, .timer-container {
+    font-size: 1.5em;
+  }
+
   .reset-btn {
-    width: 400px;
-    height: 150px;
-    font-size: 3rem;
+    width: 500px;
+    height: 200px;
+    font-size: 1.2em;
   }
 
   .modal-content {
