@@ -116,20 +116,29 @@ As a user, I would like to:
 ### Existing features
 #### Home
 * Instructions modal.
-* Call to action: stimulate the user to take action. In this case start the game.
+* Call to action: Encourage the user to take action. In this case start the game.
 
 #### Game page
 * Game tiles: clickable, turn on click.
 * Game logic: in case there is a match, the cards animate and remain visible.
-* Moves counter: after each move (two cards turned) the counter updates.
-* Game over modal
+* Moves counter: after each move (when two cards turned) the counter updates.
+* Game over modal.
 * Congratulations header.
-* Call to action: stimulate the user to take action. In this case restart the game.
-* Evaluation messages: depending on performance.
-* Call to action: stimulate the user to take action. In this case to try again and beat your best score.
-* Reset score: if you want to reset your best to 0.
+* Call to action: encourage the user to take action. In this case restart the game.
+* Evaluation/feedback messages: depending on performance.
+* Call to action: Encourage the user to take action. In this case to try again and beat your best score.
+* Reset score: Restart the game again at any stage.
 
 #### Features that can be implemented
 High score board: show all time statistics of all users.
-More game difficulty modes
-Timed mode: add a timer as extra challenge, finish game before timer runs out.
+More game difficulty modes.
+Timed mode: add a timer to make the game more challenging, i.e. finish game before timer runs out.
+
+***
+
+## Technologies Used
+* HTML
+* CSS
+* Javascript
+* Google Fonts
+* Font Awesome Library
