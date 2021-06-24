@@ -104,7 +104,7 @@ As a user, I would like to:
 * Be able to be 'competitive' and beat my own scores.
 * Click on any card as first card and clicked card should turn.
 * Click any card as second card and clicked card should turn.
-* Be given rewarding feedback when cards match (colour scheme change and sound feedback)
+* Be given rewarding feedback when cards match (colour scheme change and sound feedback) and cards remain visible.
 * See cards flip back when there is no match, and be given feedback to indicate no match.
 * Know the number of moves I have made so far and how long it has been since I started the game.
 * Get confirmation and performance feedback when the game is finished.
