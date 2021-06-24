@@ -443,7 +443,7 @@ background: transparent;
     border: 0.8em solid #fc4;
     width: 80%;
     height: 60%;
-    padding-bottom: 30px;
+    padding: 60px 30px;
   }
 
   .modal p {
