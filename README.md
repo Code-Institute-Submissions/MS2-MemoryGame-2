@@ -109,3 +109,27 @@ As a user, I would like to:
 * Know the number of moves I have made so far and how long it has been since I started the game.
 * Get confirmation and performance feedback when the game is finished.
 * Have the option to play again, and reset card deck.
+
+***
+
+## Features
+### Existing features
+#### Home
+* Instructions modal.
+* Call to action: stimulate the user to take action. In this case start the game.
+
+#### Game page
+* Game tiles: clickable, turn on click.
+* Game logic: in case there is a match, the cards animate and remain visible.
+* Moves counter: after each move (two cards turned) the counter updates.
+* Game over modal
+* Congratulations header.
+* Call to action: stimulate the user to take action. In this case restart the game.
+* Evaluation messages: depending on performance.
+* Call to action: stimulate the user to take action. In this case to try again and beat your best score.
+* Reset score: if you want to reset your best to 0.
+
+#### Features that can be implemented
+High score board: show all time statistics of all users.
+More game difficulty modes
+Timed mode: add a timer as extra challenge, finish game before timer runs out.
