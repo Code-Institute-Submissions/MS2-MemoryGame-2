@@ -231,7 +231,7 @@ background: transparent;
 }
 
 .noMatch {
-  background: red;
+  background: rgb(182, 3, 3);
   visibility: visible;
   cursor: default;
   animation: pulse 1s;
