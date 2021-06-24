@@ -358,6 +358,9 @@ window.addEventListener("DOMContentLoaded", function() {
 
     //Flip the card and display cards img
     function flipCard() {
+       //play "flip" audio file
+       let flip = new Audio("sounds/flip.mp3");
+       flip.play();
       // When <li> is clicked add the class .flip to show img
       event.target.classList.add("flip");
       // Call addToOpenedCards() function
