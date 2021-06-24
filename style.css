@@ -373,9 +373,9 @@ background: transparent;
   }
 
   .modal-content {
-    height: 70%;
+    height: auto;
     margin: 20% auto;
-    padding: 20px 10px;
+    padding: 50px 8px;
   }
 
   .modal p {
