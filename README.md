@@ -167,6 +167,7 @@ As a user, I would like to:
 * Javascript
 * Google Fonts
 * Font Awesome Library
+* Chrome Developer Tools
 * Markup Validation Service
 * CSS Validation Service
 * JSHint
