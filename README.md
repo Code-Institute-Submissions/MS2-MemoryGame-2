@@ -21,7 +21,9 @@ Memory Game
 
 This is a simple Memory Game Web Application created for my MS2 project with Code Institute. The game is designed to test a user's memory and is made up of a deck of cards, each card containing an image assigned randomly.
 
-![snippet](images/appScreenshot.png)
+<p align="center">
+   <img src="images/appScreenshot.png" alt="screenshot of memory game"/>
+</p>
 
  ## Challenge
  
