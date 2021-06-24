@@ -94,3 +94,19 @@ The deck of cards was designed using CSS grid, in order to ensure responsiveness
 * A function that displays the win-game modal.
 * A Win-game function that displays the win-game modal when game is completed, and calls the stats function and stoptimer function.
 * A function that handles clicked cards, applies flip animation, plays audio reveals backface and adds card content to openedCards array.
+
+***
+
+## User Stories
+As a user, I would like to:
+
+See a visually appealing, challenging game!
+Be able to be 'competitive' and beat my own scores.
+Click any card as first card and card should turn.
+Click any card as second card and card should turn.
+Be given rewarding feedback when cards match (colour scheme change and sound feedback)
+See cards flip back when there is no match, and be given feedback to indicate no match.
+See the number of moves I have made so far and how long it has been since I started the game.
+Get confirmation when the game is finished.
+Have the option to play again, and reset card deck.
+Have fun!
