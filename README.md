@@ -201,6 +201,22 @@ As a user, I would like to:
 
 ## Testing
 
+### HTML
+
+Both the index and the home pages passed the HTML W3C Markup Validation Service with no errors.
+
+### CSS
+
+Bothe the index and home pages passed the W3C CSS validation Service with no errors shown.
+
+### Javascript
+
+JSHint has returned back 51 warnings, however no problems with logic or syntax. The warnings are all related to the use of the let and const keywords, which is in itself not an issue. JSHint has recommended that those keywords are available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz), and I figured that I needed to tell JSHint that my code uses ECMAScript 6 specific syntax. However not all browsers implement them, so I didn't worry about the JSHint feedback, for as long as there are no logical or syntactical errors.
+
+### Responsiveness
+
+As a backup to using Chrome developer tools to check for responsiveness across multiple devices, I have also used http://ami.responsivedesign.is and was very pleased with the outcome, and the game layout across various screen sizes.
+
 ## Deployment
 
 ## Credits
