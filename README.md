@@ -194,8 +194,11 @@ As a user, I would like to:
 * Chrome Developer Tools
 * Markup Validation Service
 * CSS Validation Service
-* JSHint
+* JSHint for testing JS code
 * Am I responsive
+* Gitpod.io - for writing the code. Using the command line for committing and pushing to GitHub 
+* GitHub - Used to host repository  
+* GIT - for version control of the project. 
 
 ***
 
@@ -217,6 +220,35 @@ JSHint has returned back 51 warnings, however no problems with logic or syntax. 
 
 As a backup to using Chrome developer tools to check for responsiveness across multiple devices, I have also used http://ami.responsivedesign.is and was very pleased with the outcome, and the game layout across various screen sizes.
 
+***
+
 ## Deployment
 
+### GitHub Pages
+
+To publish the website:
+
+* Open GitHub and go to your site's 'Repositories'.
+* Go to 'Settings'.
+* Scroll down until you see 'GitHub Pages'.
+* Under GitHub pages, click on the dropdown under 'Source' and select the 'Master Branch' option.
+* A green box should appear with the following message 'Your site is published at https://motazabdou.github.io/MS2-MemoryGame/'.
+
+
+### Cloning a Repository
+
+To clone the website from within your IDE:
+
+* Go to the main page of the GitHub repository and click on the dropdown menu 'Clone or download'.
+* Select 'Clone with HTTPS'.
+* Open the command line in your IDE.
+* Navigate to the directory where you want to clone the project.
+* Type 'git clone' followed by the copied URL: paste it right after 'git clone'.
+* Press 'Enter' and the local clone will be created
+
+***
+
 ## Credits
+
+* [W3C schools](https://www.w3schools.com/)
+* [Mozilla Developer Networks](https://developer.mozilla.org/en-US/)
