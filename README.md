@@ -21,13 +21,11 @@ Memory Game
 
 * [Game Requirements](#Game-Requirements)
 
-* [Logic](#Logic/Game-Process)
+* [Logic](#Game-Logic)
 
 * [User Stories](#user-stories)
 
 * [Features](#features) 
-
-* [Designs](#designs) 
 
 * [Technologies Used](#technologies-used) 
 
@@ -35,7 +33,7 @@ Memory Game
 
 * [Deployment](#deployment) 
 
-* [Acknowledgements](#credit)
+* [Acknowledgements](#credits)
 
 ***
 
@@ -112,7 +110,7 @@ The deck of cards was designed using CSS grid, in order to ensure responsiveness
 
 ***
  
-## Logic / Game Process
+## Game Logic 
 
 * An array that stores the image paths, which will be assigned to the cards and displayed on their backfaces.
 
