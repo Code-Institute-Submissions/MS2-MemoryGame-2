@@ -13,6 +13,26 @@ Memory Game
 
 ***  
 
+## Index – Table of Contents 
+
+* [About](#About)
+
+* [User Experience (UX)](#user-experience)  
+
+* [Features](#features) 
+
+* [Designs](#designs) 
+
+* [Technologies Used](#technologies-used) 
+
+* [Testing](#testing) 
+
+* [Deployment](#deployment) 
+
+* [Acknowledgements](#credit)
+
+***
+
   
 
 ## About   
