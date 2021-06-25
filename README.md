@@ -252,3 +252,11 @@ To clone the website from within your IDE:
 
 * [W3C schools](https://www.w3schools.com/)
 * [Mozilla Developer Networks](https://developer.mozilla.org/en-US/)
+* [Flaticon.com](https://www.flaticon.com/) for the all images used in the project
+* Kris DeBruine Media - [How to shuffle an array](https://www.youtube.com/watch?v=79AWYPyPEdU)
+* Adam Khoury - [Visualising the Fisher-Yates shuffle method](https://www.youtube.com/watch?v=tLxBwSL3lPQ&t=423s)
+* FreeCodeCamp.org for tutorials regarding breaking down Memory game logic
+* [Sandra Israel's Memory game process for inspiration](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-what-is-the-memory-game) 
+* Flip Cards based on [W3C flip card tutorial](https://www.w3schools.com/howto/howto_css_flip_card.asp)
+* [SVG Backgrounds](https://www.svgbackgrounds.com/) for free customisable SVG Backgrounds.
+* [CSS gradient generator](https://cssgradient.io/)
