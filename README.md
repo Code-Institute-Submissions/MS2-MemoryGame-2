@@ -16,23 +16,14 @@ Memory Game
 ## Index – Table of Contents 
 
 * [About](#About)
-
 * [Game Layout](#Game-Layout) 
-
 * [Game Requirements](#Game-Requirements)
-
 * [Logic](#Game-Logic)
-
 * [User Stories](#user-stories)
-
 * [Features](#features) 
-
 * [Technologies Used](#technologies-used) 
-
 * [Testing](#testing) 
-
 * [Deployment](#deployment) 
-
 * [Acknowledgements](#credits)
 
 ***
@@ -41,9 +32,7 @@ Memory Game
 
 ## About   
 
-  
-
-This is a simple Memory Game Web Application created for my MS2 project with Code Institute. The game is designed to test a user's memory and is made up of a deck of cards, each card containing an image assigned randomly.
+This is a simple Memory Game Web Application created for my second Milestone project with Code Institute. The game is designed to test a user's memory and is made up of a deck of cards, each card containing an image assigned randomly. The goal is to click on a card to reveal the image behind it, memorise the card containing that image and match cards with similar images until all 8 pairs are matched.
 
 <p align="center">
    <img src="images/appScreenshot.png" alt="screenshot of memory game"/>
@@ -67,11 +56,11 @@ This is a simple Memory Game Web Application created for my MS2 project with Cod
 
 ## Game Layout
 
-The game is made up of a single page containing a header, a score panel that keeps tabs of performance indicators such as the time, the number of moves and the current star rating of the user, depending on the performance, and also contains the reset button.
+The index page is made up of a modal that contains instructions on how to play the game, and a button taking the user to the game page. The game itself is made up of a single page containing a header, a score panel that keeps tabs of performance indicators such as the time, the number of moves and the current star rating of the user, depending on the performance, and also contains the reset button.
 
-The game board is made up of a deck div containing 16 cards which were created dynamically in javascript. Each card consists of a front face and a backface. On card hover, the card background lightens upslightly, and on card click, the card flips 180 degrees and reveals the image behind it, which the user then needs to memorise to improve performance. 
+The game board is made up of a deck division containing 16 cards which were created dynamically in javascript. Each card consists of a front face and a backface. On card hover, the card background lightens up slightly, and on card click, the card flips 180 degrees and reveals the image behind it, which the user then needs to memorise to improve performance. 
 
-The primary colours used in my palette were three shades of green, two shades of yellow/orange, on a green & black vector background. The cards have an image of a vector cartoon animal to convey a more "game" feel, as well as careful choice of multi-coloured vector icons on the backface of the cards to ensure some colour diversity while maintaining a three-coloured theme. 
+The primary colours used in my palette were three shades of green (Emerald, Green Pantone, and lincoln green), two shades of yellow/orange (Orange web & Gold Web) for contrast, on a green & black vector background customized on svgbackgrounds.com. The cards have an image of a vector cartoon animal to convey a more "game" feel, as well as careful choice of multi-coloured vector icons on the backface of the cards to ensure colour diversity while maintaining a tri-coloured theme. 
 
 
 <p align="center">
@@ -80,7 +69,9 @@ The primary colours used in my palette were three shades of green, two shades of
 
 A "Win-Game" Modal appears in the center of the screen upon completion of the game, providing feedback concerning grade, star rating and time taken to complete the game.
 
-The deck of cards was designed using CSS grid, in order to ensure responsiveness
+The deck of cards was designed using CSS grid, in order to ensure responsiveness.
+
+Fonts used were Exo 2 and quicksand as they are very readable and game-friendly, conveying a slight comical feel which is appropriate to the goal of the game.
 
 ***
 
@@ -91,6 +82,8 @@ The deck of cards was designed using CSS grid, in order to ensure responsiveness
 * The game needs to be able to handle both matched and unmatched cards.
 
 * Cards need to make a sound when flipped, a success sound when they match, an error sound when unmatched and a victory sound when game is completed.
+
+* Cards must not be clickable when they are already open.
 
 * Game should be able to display the number of moves or clicks a user has made.
 
@@ -142,21 +135,22 @@ The deck of cards was designed using CSS grid, in order to ensure responsiveness
 
 * A Win-game function that displays the win-game modal when game is completed, and calls the stats function and stoptimer function.
 
-* A function that handles clicked cards, applies flip animation, plays audio reveals backface and adds card content to openedCards array.
+* A function that handles clicked cards, applies flip animation, plays audio, reveals backface and adds card content to openedCards array.
 
 ***
 
 ## User Stories
 As a user, I would like to:
 
-* See a visually appealing, challenging game!
+* See a visually appealing, intuitive, challenging, fun game!
 * Be able to be 'competitive' and beat my own scores.
 * Click on any card as first card and clicked card should turn.
 * Click any card as second card and clicked card should turn.
-* Be given rewarding feedback when cards match (colour scheme change and sound feedback) and cards remain visible.
+* Be given rewarding feedback when cards match (colour change and sound feedback) and cards remain visible.
 * See cards flip back when there is no match, and be given feedback to indicate no match.
 * Know the number of moves I have made so far and how long it has been since I started the game.
 * Get confirmation and performance feedback when the game is finished.
+* Grading system to encourage the user to try to beat own score (eg. success, pass, fail)
 * Have the option to play again, and reset card deck.
 
 ***
@@ -164,11 +158,11 @@ As a user, I would like to:
 ## Features
 ### Existing features
 #### Home
-* Instructions modal.
-* Call to action: Encourage the user to take action. In this case start the game.
+* Intuitve instructions modal.
+* Call to action: Encourage the user to take action. In the case of the home page, start the game.
 
 #### Game page
-* Game tiles: clickable, turn on click.
+* Game cards: clickable, and turn on click.
 * Game logic: in case there is a match, the cards animate and remain visible.
 * Moves counter: after each move (when two cards turned) the counter updates.
 * Game over modal.
@@ -179,8 +173,9 @@ As a user, I would like to:
 * Reset score: Restart the game again at any stage.
 
 #### Features that can be implemented
-* High score board: show all time statistics of all users.
+* High all-time board: show all time statistics of all users.
 * More game difficulty modes.
+* Auditory cues to assist memorisation.
 * Timed mode: add a timer to make the game more challenging, i.e. finish game before timer runs out.
 
 ***
