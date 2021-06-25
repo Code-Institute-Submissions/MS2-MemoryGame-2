@@ -17,7 +17,13 @@ Memory Game
 
 * [About](#About)
 
-* [User Experience (UX)](#user-experience)  
+* [Game Layout](#Game-Layout) 
+
+* [Game Requirements](#Game-Requirements)
+
+* [Logic](#Logic/Game-Process)
+
+* [User Stories](#user-stories)
 
 * [Features](#features) 
 
